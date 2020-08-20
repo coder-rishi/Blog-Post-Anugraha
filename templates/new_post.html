@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>New Post</title>
+{% endblock %}
+
+{% block body %}
+<hr>
+<h2>Create new Blog post</h2>
+<form action="/posts" method="POST">
+    <label for="title">Title</label> 
+    <input class="form-control" type="text" placeholder="Enter Title" aria-label="Search" name="title" id="title">
+    <!--input type="text" name="title" id="title"-->
+    <br>
+    <label for="content">Post</label>
+    <!--input class="form-control" type="text" placeholder="Content" aria-label="Search" name="content" id="content"-->
+    <textarea class="form-control" id="content" name="content" rows="3"></textarea>
+    <!--input type="text" name="content" id="content"-->
+    <br>
+    <label for="author">Author</label> 
+    <input class="form-control" type="text" placeholder="Author" aria-label="Search" name="author" id="author">
+    <!--input type="text" name="author" id="author"-->
+    <br>
+    <input type="submit" value="Post">
+</form>
+<hr>
+{% endblock %}
